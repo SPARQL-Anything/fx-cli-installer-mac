@@ -11,3 +11,4 @@ By default, installation directory is `$HOME/.sparql-anything/`. To change, edit
 Tested on macOS versions:
 
 - 10.15.7
+- 11.6
