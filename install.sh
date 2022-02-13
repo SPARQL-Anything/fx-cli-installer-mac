@@ -87,6 +87,23 @@ echo "$LOGO"
 echo ""
 echo "SPARQL Anything -- fx command line installer"
 echo ""
+echo "Requirements: Java >=11, wget, curl"
+# Check requirements
+if ! command -v java &> /dev/null
+then
+  echo "java could not be found. Please install java >=11 and run again."
+  exit 1
+fi
+if ! command -v curl &> /dev/null
+then
+  echo "curl could not be found. Please install curl and run again."
+  exit 1
+fi
+if ! command -v wget &> /dev/null
+then
+  echo "wget could not be found. Please install wget and run again."
+  exit 1
+fi
 #
 # Prepare install dir and download latest version
 [ ! -d "$install_dir" ] && mkdir -p "$install_dir"
@@ -105,11 +122,6 @@ if test -f "$install_dir/$jar"; then
    echo "Latest release already installed"
 else
    echo "Downloading latest release"
-   if ! command -v wget &> /dev/null
-   then
-     echo "wget could not be found. Please install wget and run again."
-     exit 1
-   fi
    #echo "Latest version is: "$download_url
    cd "$install_dir" 
    wget $download_url
