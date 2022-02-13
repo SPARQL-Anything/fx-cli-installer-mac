@@ -75,7 +75,7 @@ fi
 #
 # Run SPARQL Anything CLI
 #
-java $options -jar \$location  "\$@"
+java \$options -jar \$location  "\$@"
 EOF
 #
 #
