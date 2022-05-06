@@ -57,7 +57,7 @@ log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything=$fxLog $log"
 options="-Xmx4g $log"
 #
 # Development (Uncomment and configure)
-location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-0.8.0-SNAPSHOT.jar
+#location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-0.8.0-SNAPSHOT.jar
 #
 #
 #
