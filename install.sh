@@ -41,13 +41,23 @@ read -r -d '' FXCLI << EOF
 ##############################################################
 #
 # Logging level: any of 'error' 'warn' 'info' 'debug'  'trace'
-log=error
+#
+fxLog=error
+cliLog=error
+arqLog=error
+defaultLog=error
+#
+log="-Dorg.slf4j.simpleLogger.log.org.apache.jena.arq=$arqLog"
+log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything.cli=$cliLog $log"
+log="-Dorg.slf4j.simpleLogger.defaultLogLevel=$defaultLog $log"
+log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything=$fxLog $log"
+#
 #
 # JVM options
-options="-Xmx8g -Dorg.slf4j.simpleLogger.defaultLogLevel=error -Dorg.slf4j.simpleLogger.log.com.github.sparqlanything=\$log"
+options="-Xmx4g $log"
 #
 # Development (Uncomment and configure)
-#location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-0.5.0-SNAPSHOT.jar
+location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-0.8.0-SNAPSHOT.jar
 #
 #
 #
