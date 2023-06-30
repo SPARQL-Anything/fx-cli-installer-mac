@@ -47,16 +47,17 @@ cliLog=error
 arqLog=error
 defaultLog=error
 #
-log="-Dorg.slf4j.simpleLogger.log.org.apache.jena.arq=$arqLog"
-log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything.cli=$cliLog $log"
-log="-Dorg.slf4j.simpleLogger.defaultLogLevel=$defaultLog $log"
-log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything=$fxLog $log"
+log="-Dorg.slf4j.simpleLogger.log.org.apache.jena.arq=\$arqLog"
+log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything.cli=\$cliLog \$log"
+log="-Dorg.slf4j.simpleLogger.defaultLogLevel=$defaultLog \$log"
+log="-Dorg.slf4j.simpleLogger.log.com.github.sparqlanything=\$fxLog \$log"
 #
 #
 # JVM options
-options="-Xmx4g $log"
+options="-Xmx4g \$log"
 #
 # Development (Uncomment and configure)
+# Link ~/.sparql-anything/dev/ to project folder
 #location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-0.8.0-SNAPSHOT.jar
 #
 #
