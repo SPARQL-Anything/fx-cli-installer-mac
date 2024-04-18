@@ -58,7 +58,7 @@ options="-Xmx4g \$log"
 #
 # Development (Uncomment and configure)
 # Link ~/.sparql-anything/dev/ to project folder
-#location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-0.8.0-SNAPSHOT.jar
+#location=~/.sparql-anything/dev/sparql.anything/sparql-anything-cli/target/sparql-anything-1.0.0-SNAPSHOT.jar
 #
 #
 #
